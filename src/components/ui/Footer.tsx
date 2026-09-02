@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
           {/* Brand, Address & Socials */}
           <div className="flex flex-col items-center md:items-start gap-4">
-            <div className="relative w-32 h-10 mb-2">
+            <div className="relative w-44 h-14 mb-2">
               <Image src="/logo.svg" alt="El Cardo Logo" fill className="object-contain object-center md:object-left" />
             </div>
             <p className="text-sm max-w-xs leading-relaxed">

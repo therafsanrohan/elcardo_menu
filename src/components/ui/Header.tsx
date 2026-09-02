@@ -51,7 +51,7 @@ export function Header() {
         }`}
       >
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <Link href="/" className="relative w-32 h-10">
+          <Link href="/" className="relative w-44 h-14">
             <Image src="/logo.svg" alt="El Cardo Logo" fill className="object-contain object-left" priority />
           </Link>
           
