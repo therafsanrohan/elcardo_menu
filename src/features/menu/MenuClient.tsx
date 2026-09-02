@@ -74,7 +74,7 @@ export function MenuClient({ initialData, initialCuisine = "all" }: MenuClientPr
       {/* Search Bar */}
       <div className="w-full max-w-md mx-auto mb-8 relative">
         <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none z-10">
-          <Search className="h-5 w-5 text-[var(--color-brand-gold)]" />
+          <Search className="h-4 w-4 text-[var(--color-brand-ivory)]/50" strokeWidth={1.5} />
         </div>
         <input
           type="text"
