@@ -1,5 +1,6 @@
 import { Header } from "@/components/ui/Header";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, MapPin } from "lucide-react";
 
 export default function Home() {
@@ -47,7 +48,8 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
               {/* Thai Card */}
               <Link href="/menu?cuisine=thai" className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-[var(--color-brand-surface)] flex items-end">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 transition-opacity group-hover:opacity-90"></div>
+                <Image src="/images/thai.jpg" alt="Thai & Asian Fusion" fill className="object-cover z-0 transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 z-10 transition-opacity group-hover:opacity-90"></div>
                 <div className="relative z-20 p-6 md:p-8 w-full">
                   <h3 className="font-display text-xl md:text-2xl text-[var(--color-brand-ivory)] mb-1 md:mb-2">Craving Southeast?</h3>
                   <p className="text-[var(--color-brand-gold)] text-xs md:text-sm tracking-wider uppercase font-semibold">Thai & Asian Fusion</p>
@@ -56,7 +58,8 @@ export default function Home() {
               
               {/* Indian Card */}
               <Link href="/menu?cuisine=indian" className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-[var(--color-brand-surface)] flex items-end">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 transition-opacity group-hover:opacity-90"></div>
+                <Image src="/images/south_indian.jpg" alt="South Indian Cuisine" fill className="object-cover z-0 transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 z-10 transition-opacity group-hover:opacity-90"></div>
                 <div className="relative z-20 p-6 md:p-8 w-full">
                   <h3 className="font-display text-xl md:text-2xl text-[var(--color-brand-ivory)] mb-1 md:mb-2">Craving South?</h3>
                   <p className="text-[var(--color-brand-gold)] text-xs md:text-sm tracking-wider uppercase font-semibold">South Indian Cuisine</p>
