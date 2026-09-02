@@ -44,31 +44,40 @@ export default function Home() {
               <div className="w-24 h-1 bg-[var(--color-brand-gold)] mx-auto"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
               {/* Thai Card */}
               <Link href="/menu?cuisine=thai" className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-[var(--color-brand-surface)] flex items-end">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 transition-opacity group-hover:opacity-90"></div>
-                <div className="relative z-20 p-8 w-full">
-                  <h3 className="font-display text-2xl text-[var(--color-brand-ivory)] mb-2">Craving Southeast?</h3>
-                  <p className="text-[var(--color-brand-gold)] text-sm tracking-wider uppercase font-semibold">Thai & Asian Fusion</p>
+                <div className="relative z-20 p-6 md:p-8 w-full">
+                  <h3 className="font-display text-xl md:text-2xl text-[var(--color-brand-ivory)] mb-1 md:mb-2">Craving Southeast?</h3>
+                  <p className="text-[var(--color-brand-gold)] text-xs md:text-sm tracking-wider uppercase font-semibold">Thai & Asian Fusion</p>
                 </div>
               </Link>
               
               {/* Indian Card */}
               <Link href="/menu?cuisine=indian" className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-[var(--color-brand-surface)] flex items-end">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 transition-opacity group-hover:opacity-90"></div>
-                <div className="relative z-20 p-8 w-full">
-                  <h3 className="font-display text-2xl text-[var(--color-brand-ivory)] mb-2">Craving South?</h3>
-                  <p className="text-[var(--color-brand-gold)] text-sm tracking-wider uppercase font-semibold">South Indian Cuisine</p>
+                <div className="relative z-20 p-6 md:p-8 w-full">
+                  <h3 className="font-display text-xl md:text-2xl text-[var(--color-brand-ivory)] mb-1 md:mb-2">Craving South?</h3>
+                  <p className="text-[var(--color-brand-gold)] text-xs md:text-sm tracking-wider uppercase font-semibold">South Indian Cuisine</p>
+                </div>
+              </Link>
+
+              {/* Cafe Card */}
+              <Link href="/menu?cuisine=cafe" className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-[var(--color-brand-surface)] flex items-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 transition-opacity group-hover:opacity-90"></div>
+                <div className="relative z-20 p-6 md:p-8 w-full">
+                  <h3 className="font-display text-xl md:text-2xl text-[var(--color-brand-ivory)] mb-1 md:mb-2">Need a Sip?</h3>
+                  <p className="text-[var(--color-brand-gold)] text-xs md:text-sm tracking-wider uppercase font-semibold">Drinks & Desserts</p>
                 </div>
               </Link>
 
               {/* All Menu */}
               <Link href="/menu" className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-[var(--color-brand-surface)] border border-[var(--color-brand-gold)]/20 flex items-center justify-center">
-                <div className="relative z-20 p-8 text-center">
-                  <h3 className="font-display text-2xl text-[var(--color-brand-gold)] mb-4">Explore Full Menu</h3>
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[var(--color-brand-gold)]/10 text-[var(--color-brand-gold)] group-hover:scale-110 transition-transform">
-                    <ArrowRight className="w-5 h-5" />
+                <div className="relative z-20 p-6 md:p-8 text-center">
+                  <h3 className="font-display text-xl md:text-2xl text-[var(--color-brand-gold)] mb-3 md:mb-4">Explore Full Menu</h3>
+                  <div className="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[var(--color-brand-gold)]/10 text-[var(--color-brand-gold)] group-hover:scale-110 transition-transform">
+                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
                   </div>
                 </div>
               </Link>
