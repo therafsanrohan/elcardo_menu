@@ -71,37 +71,36 @@ export function MenuClient({ initialData, initialCuisine = "all" }: MenuClientPr
         </div>
       </div>
 
-      {/* Search & Category Chips */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
-        <div className="w-full md:w-auto overflow-x-auto pb-2 -mx-4 px-4 md:mx-0 md:px-0 md:pb-0 hide-scrollbar">
-          <div className="flex gap-2">
-            {categories.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`whitespace-nowrap px-4 py-2 rounded-full font-ui text-sm transition-colors ${
-                  activeCategory === cat
-                    ? "bg-[var(--color-brand-gold)] text-[var(--color-brand-obsidian)] font-medium"
-                    : "bg-[var(--color-brand-surface)] text-[var(--color-brand-ivory)]/70 hover:bg-white/10"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+      {/* Search Bar */}
+      <div className="w-full max-w-md mx-auto mb-8 relative">
+        <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+          <Search className="h-4 w-4 text-[var(--color-brand-ivory)]/40" />
         </div>
-        
-        <div className="w-full md:w-72 relative">
-          <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
-            <Search className="h-4 w-4 text-[var(--color-brand-ivory)]/40" />
-          </div>
-          <input
-            type="text"
-            placeholder="Search dishes..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-[var(--color-brand-surface)]/50 backdrop-blur-xl border border-white/5 hover:border-white/10 focus:border-[var(--color-brand-gold)]/50 text-[var(--color-brand-ivory)] rounded-full pl-11 pr-4 py-2.5 font-ui text-sm transition-colors placeholder:text-white/30 focus:outline-none focus:ring-4 focus:ring-[var(--color-brand-gold)]/10"
-          />
+        <input
+          type="text"
+          placeholder="Search dishes..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="w-full bg-[var(--color-brand-surface)]/50 backdrop-blur-xl border border-white/5 hover:border-white/10 focus:border-[var(--color-brand-gold)]/50 text-[var(--color-brand-ivory)] rounded-full pl-11 pr-4 py-2.5 font-ui text-sm transition-colors placeholder:text-white/30 focus:outline-none focus:ring-4 focus:ring-[var(--color-brand-gold)]/10"
+        />
+      </div>
+
+      {/* Category Chips */}
+      <div className="w-full overflow-x-auto pb-4 mb-8 -mx-4 px-4 md:mx-0 md:px-0 hide-scrollbar">
+        <div className="flex gap-2 md:justify-center min-w-max">
+          {categories.map(cat => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`whitespace-nowrap px-4 py-2 rounded-full font-ui text-sm transition-colors ${
+                activeCategory === cat
+                  ? "bg-[var(--color-brand-gold)] text-[var(--color-brand-obsidian)] font-medium"
+                  : "bg-[var(--color-brand-surface)] text-[var(--color-brand-ivory)]/70 hover:bg-white/10"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
       </div>
 
